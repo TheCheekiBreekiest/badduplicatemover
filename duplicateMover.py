@@ -1,9 +1,10 @@
 import os
 import shutil
 
-files = 'D:\general modding\Python stuff\Duplicate mover\src\\'
-# srcpath = r"D:\general modding\Python stuff\Duplicate mover\src"
-dest = "D:\general modding\Python stuff\Duplicate mover\output\\"
+# path of your folder containing duplicate files, needs an extra \
+files = 'path\'
+# path of your folder where duplicates are being moved to, needs an extra \
+dest = 'output_path\'
 
 movedFiles = 0
 
@@ -12,10 +13,8 @@ for filename in os.listdir(files):
         if filename.endswith(' (1).jpg') or filename.endswith(' (1).mp4'):
             shutil.move(files + filename, dest)
             movedFiles = movedFiles + 1
-        # elif filename.endswith(' (1).mp4'):
-        #    shutil.move(files + filename, dest)
-        #    movedFiles = movedFiles + 1
-            
+
+        # still prints every string twice if duplicate files are found
         if movedFiles != 1:
             print(str(movedFiles) + " files have been moved successfully")
         else:
