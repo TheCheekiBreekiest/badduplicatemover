@@ -1,10 +1,10 @@
 import os
 import shutil
 
-# path of your folder containing duplicate files, needs an extra \
-files = 'path\'
-# path of your folder where duplicates are being moved to, needs an extra \
-dest = 'output_path\'
+# path of your folder containing duplicate files, needs an extra \, like 'C:\images\\'
+files = 'source_path'
+# path of your folder where duplicates are being moved to, needs an extra \, like 'C:\images\\'
+dest = 'output_path'
 
 movedFiles = 0
 
